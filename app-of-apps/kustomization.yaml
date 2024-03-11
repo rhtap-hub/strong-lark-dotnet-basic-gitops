@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: strong-lark-dotnet-basic 
+  janus-idp.io/tekton: strong-lark-dotnet-basic
+  backstage.io/kubernetes-id: strong-lark-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-integ 
+  app.kubernetes.io/part-of: strong-lark-dotnet-basic
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
